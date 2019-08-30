@@ -29,7 +29,7 @@ docker run -ti -p 8080:8080 \
   -e RDP_PASSWORD=REPLACETHIS \
   -e RDP_IGNORE_CERT=REPLACETHIS \
   -e RDP_SECURITY=REPLACETHIS \
-  guacamole-test
+  guacamole
 ```
 
 RDP_IGNORE_CERT and RDP_SECURITY are optional and can be ignored unless there's errors.  Refer to the guacamole docs here:
