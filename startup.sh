@@ -4,7 +4,7 @@ help() {
 echo "ERROR: One of the required vars has not been passed, please refer to the following help
 
 USAGE:
-docker run -it -p 8080:8080 guacamole:<tag> <option>
+docker run -it -p 8080:8080 guacamole:<tag>
 
 REQUIRED ENVIRONMENT VARIABLES:
 
