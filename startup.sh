@@ -43,16 +43,19 @@ default() {
 *==================================================================*" > /etc/help-msg
 }
 
-
-
-
 # if not defined, define these:
 
 : ${RDP_IGNORE_CERT:="true"}
 : ${RDP_SECURITY:="nla"}
 
-# if not defined, print help and exit:
-if [[ -z ${GUAC_USERNAME} || -z ${GUAC_PASSWORD} || -z ${RDP_HOST} || -z ${RDP_USERNAME} || -z ${RDP_PASSWORD} ]] ; then
+# check if there's a user-mapping.xml for the user
+
+if [[ -d $WORKDIR/guacamole-user-settings/$IPLANT_USER && -f $WORKDIR/guacamole-user-settings/$IPLANT_USER/user-mapping.xml ]] ; then
+    cp $WORKDIR/guacamole-user-settings/$IPLANT_USER/user-mapping.xml /etc/guacamole/user-mapping.xml
+
+# if not defined, print help and exit, else print user-mapping:
+
+elif [[ -z ${GUAC_USERNAME} || -z ${GUAC_PASSWORD} || -z ${RDP_HOST} || -z ${RDP_USERNAME} || -z ${RDP_PASSWORD} ]] ; then
     help
     exit 1
 else
