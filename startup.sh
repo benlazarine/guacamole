@@ -50,8 +50,8 @@ default() {
 
 # check if there's a user-mapping.xml for the user
 
-if [[ -d /guacamole-user-settings/$IPLANT_USER && -f /guacamole-user-settings/$IPLANT_USER/user-mapping.xml ]] ; then
-    cp /guacamole-user-settings/$IPLANT_USER/user-mapping.xml /etc/guacamole/user-mapping.xml
+if [[ -d $WORKDIR/guacamole-user-settings/$IPLANT_USER && -f $WORKDIR/guacamole-user-settings/$IPLANT_USER/user-mapping.xml ]] ; then
+    cp $WORKDIR/guacamole-user-settings/$IPLANT_USER/user-mapping.xml /etc/guacamole/user-mapping.xml
 
 # if not defined, print help and exit, else print user-mapping:
 

@@ -74,6 +74,8 @@ RUN echo "load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anon
 RUN touch /etc/help-msg
 
 WORKDIR /home/user
+ENV WORKDIR /home/user
+
 
 COPY startup.sh /startup.sh
 RUN chmod +x /startup.sh
