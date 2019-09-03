@@ -61,6 +61,6 @@ find /users
 Run the following:
 
 ```
-docker run -ti -p 8080:8080 -v /users:/guacamole-user-settings -e IPLANT_USER=user1 guacamole
+docker run -ti -p 8080:8080 -v /users:/home/user/guacamole-user-settings -e IPLANT_USER=user1 guacamole
 
 ```
