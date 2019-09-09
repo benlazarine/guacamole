@@ -50,12 +50,9 @@ Create folders for usernames, storing user-mapping.xml.  As an example:
 ```
 find /users
 /users
-/users/user2
-/users/user2/user-mapping.xml
-/users/user1
-/users/user1/user-mapping.xml
-/users/user3
-/users/user3/user-mapping.xml
+/users/user2.user-mapping.xml
+/users/user1.user-mapping.xml
+/users/user3.user-mapping.xml
 ```
 
 Run the following:

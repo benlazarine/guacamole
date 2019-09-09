@@ -53,7 +53,7 @@ default() {
 if [[ -f $WORKDIR/guacamole-user-settings/$IPLANT_USER.user-mapping.xml ]] ; then
     cp $WORKDIR/guacamole-user-settings/$IPLANT_USER.user-mapping.xml /etc/guacamole/user-mapping.xml
 
-# if not defined, print help and exit, else print user-mapping:
+# if not, check if these vars are defined, then if not print help and exit, else print default user-mapping:
 
 elif [[ -z ${GUAC_USERNAME} || -z ${GUAC_PASSWORD} || -z ${RDP_HOST} || -z ${RDP_USERNAME} || -z ${RDP_PASSWORD} ]] ; then
     help
